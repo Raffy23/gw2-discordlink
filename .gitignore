@@ -328,3 +328,9 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# Ignore discord-rpc binary dependencies:
+discord-rpc-win64-dynamic/*
+
+# Ignore libcurl binary dependencies:
+libcurl-x64-release-static/*
