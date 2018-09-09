@@ -35,13 +35,13 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="gw2-discordlink.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Gw2MumbleLink.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="RpcClient.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

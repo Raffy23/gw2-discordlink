@@ -9,7 +9,7 @@ RpcClient::RpcClient(const std::string &language, const std::string &apikey) {
 	if (curl == nullptr) 
 		throw std::runtime_error("Unable to initalize libcurl!");
 
-	this->requestHeaders = NULL;
+	this->requestHeaders = nullptr;
 	this->requestHeaders = curl_slist_append(requestHeaders, "Content-Type: application/json");
 	this->requestHeaders = curl_slist_append(requestHeaders,(std::string("Accept-Language: ") + language).c_str());
 	if (!apikey.empty())

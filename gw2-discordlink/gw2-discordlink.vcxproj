@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Raphael\source\repos\gw2-discordlink\libcurl-x64-release-static\include;C:\Users\Raphael\source\repos\gw2-discordlink\discord-rpc-win64-dynamic\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\libcurl-x64-release-static\include;$(ProjectDir)\..\discord-rpc-win64-dynamic\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Raphael\source\repos\gw2-discordlink\libcurl-x64-release-static\lib;C:\Users\Raphael\source\repos\gw2-discordlink\discord-rpc-win64-dynamic\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\libcurl-x64-release-static\lib;$(ProjectDir)\..\discord-rpc-win64-dynamic\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Normaliz.lib;crypt32.lib;Ws2_32.lib;Wldap32.lib;libcurl_a_debug.lib;discord-rpc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -141,7 +141,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Raphael\source\repos\gw2-discordlink\libcurl-x64-release-static\include;C:\Users\Raphael\source\repos\gw2-discordlink\discord-rpc-win64-dynamic\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\libcurl-x64-release-static\include;$(ProjectDir)\..\discord-rpc-win64-dynamic\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,7 +149,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Normaliz.lib;crypt32.lib;Ws2_32.lib;Wldap32.lib;libcurl_a.lib;discord-rpc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Raphael\source\repos\gw2-discordlink\libcurl-x64-release-static\lib;C:\Users\Raphael\source\repos\gw2-discordlink\discord-rpc-win64-dynamic\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\libcurl-x64-release-static\lib;$(ProjectDir)\..\discord-rpc-win64-dynamic\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -160,7 +160,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="gw2-discordlink.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Gw2MumbleLink.cpp" />
     <ClCompile Include="RpcClient.cpp" />
     <ClCompile Include="stdafx.cpp">
