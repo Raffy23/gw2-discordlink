@@ -16,6 +16,20 @@ require a API-Key with at least the `builds` right to function properly.
 * Display how long the Character stayed on the map
 * Display profession / specialization icon besides GW2-Logo
 
+## Configure
+Create the `settings.json` file with following content and place it right along the .exe file
+```json
+{
+	"discord-api-key": "450300626241454082",
+	"gw2-api-key": "00000000-0000-0000-0000-00000000000000000000-0000-0000-0000-000000000000",
+	"lang": "en"
+}
+```
+
+### Supported Languages:
+* **English** (en)
+* **Deutsch** (de)
+
 ## Dependencies
 * [libcurl](https://curl.haxx.se/libcurl/)
 * [discord-rpc](https://github.com/discordapp/discord-rpc)
