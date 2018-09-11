@@ -38,8 +38,8 @@ private:
 	MumbleLinkMemory *lm;
 	
 public:
-	Gw2MumbleLink();
-	~Gw2MumbleLink();
+	Gw2MumbleLink() noexcept(false);
+	~Gw2MumbleLink() noexcept;
 
 	enum Profession {
 		Guardian = 1,

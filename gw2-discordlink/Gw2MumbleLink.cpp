@@ -1,22 +1,24 @@
 #include "stdafx.h"
 #include "Gw2MumbleLink.h"
 
-Gw2MumbleLink::Gw2MumbleLink() {
+Gw2MumbleLink::Gw2MumbleLink() noexcept(false) {
 	/* TODO: Mumble must be running otherwise file is not present! */
+	this->hMapObject = nullptr;
 	this->hMapObject = OpenFileMappingW(FILE_MAP_ALL_ACCESS, FALSE, L"MumbleLink");
-	if (this->hMapObject == NULL) {
+	if (this->hMapObject == nullptr) {
 		throw new std::runtime_error("Unable to open MumbeLink File!");
 	}
 
 	this->lm = (Gw2MumbleLink::MumbleLinkMemory *)MapViewOfFile(this->hMapObject, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(Gw2MumbleLink::MumbleLinkMemory));
-	if (this->lm == NULL) {
+	if (this->lm == nullptr) {
 		CloseHandle(this->hMapObject);
 		throw new std::runtime_error("Unable to read MumbeLink File!");
 	}
 }
 
-Gw2MumbleLink::~Gw2MumbleLink() {
-	CloseHandle(hMapObject);
+Gw2MumbleLink::~Gw2MumbleLink() noexcept {
+	if (hMapObject != nullptr) 
+		CloseHandle(hMapObject);
 }
 
 DWORD Gw2MumbleLink::getUITick() {
