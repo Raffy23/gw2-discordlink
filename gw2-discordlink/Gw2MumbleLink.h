@@ -34,7 +34,8 @@ private:
 		unsigned buildId;
 	};
 
-	HANDLE hMapObject;
+	HANDLE hMapObject = nullptr;
+	HANDLE mumbeFile = INVALID_HANDLE_VALUE;
 	MumbleLinkMemory *lm;
 	
 public:
