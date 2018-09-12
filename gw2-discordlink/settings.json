@@ -1,5 +1,8 @@
 {
 	"discord-api-key": "450300626241454082",
-	"gw2-api-key": "",
-	"lang": "en"
+	"lang": "en",
+	
+	"gw2-path": "C:\\Program Files (x86)\\Guild Wars 2\\Gw2-64.exe",
+	"gw2-cmd": "",
+	"gw2-api-key": ""
 }

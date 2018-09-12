@@ -2,13 +2,9 @@
 #include "Gw2MumbleLink.h"
 
 Gw2MumbleLink::Gw2MumbleLink() noexcept(false) {
-	bool ownMemory = false;
-
 	// Try to open Mumble Link mapping, mumble must be running
 	this->hMapObject = OpenFileMappingW(FILE_MAP_ALL_ACCESS, FALSE, L"MumbleLink");
 	if (this->hMapObject == nullptr) {
-		ownMemory = true;
-
 		// Create shared named memory for Mumbe Link
 		this->hMapObject = CreateFileMapping(INVALID_HANDLE_VALUE, NULL, PAGE_READWRITE, 0, sizeof(Gw2MumbleLink::MumbleLinkMemory), L"MumbleLink");
 		if (this->hMapObject == nullptr) {
@@ -22,9 +18,9 @@ Gw2MumbleLink::Gw2MumbleLink() noexcept(false) {
 		throw new std::runtime_error("Unable to read MumbeLink File!");
 	}
 
-	// If the shared memory is owned by us we want to zero it out at the beginning
-	if (ownMemory)
-		memset(this->lm, 0, sizeof(Gw2MumbleLink::MumbleLinkMemory));
+	// Zero out Mumbe Link memory, Gw2 does only write to it when fully loaded
+	// and does not zero it out itfself (there might still be data from other games)
+	memset(this->lm, 0, sizeof(Gw2MumbleLink::MumbleLinkMemory));
 }
 
 Gw2MumbleLink::~Gw2MumbleLink() noexcept {
