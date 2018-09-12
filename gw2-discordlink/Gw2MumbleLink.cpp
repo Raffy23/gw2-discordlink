@@ -2,22 +2,18 @@
 #include "Gw2MumbleLink.h"
 
 Gw2MumbleLink::Gw2MumbleLink() noexcept(false) {
-	
+	bool ownMemory = false;
+
 	// Try to open Mumble Link mapping, mumble must be running
 	this->hMapObject = OpenFileMappingW(FILE_MAP_ALL_ACCESS, FALSE, L"MumbleLink");
 	if (this->hMapObject == nullptr) {
-		
-		// Make new memory mapped file and register it as Mumbe Link file
-		this->mumbeFile = CreateFile(L"./mumble_link_file.memory", GENERIC_WRITE | GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL | FILE_FLAG_DELETE_ON_CLOSE, NULL);
-		if (this->mumbeFile == INVALID_HANDLE_VALUE)
-			throw new std::runtime_error("Unable to create mumble link file to disk");
-	
-		this->hMapObject = CreateFileMapping(this->mumbeFile, NULL, PAGE_READWRITE, 0, sizeof(Gw2MumbleLink::MumbleLinkMemory), L"MumbleLink");
+		ownMemory = true;
+
+		// Create shared named memory for Mumbe Link
+		this->hMapObject = CreateFileMapping(INVALID_HANDLE_VALUE, NULL, PAGE_READWRITE, 0, sizeof(Gw2MumbleLink::MumbleLinkMemory), L"MumbleLink");
 		if (this->hMapObject == nullptr) {
-			CloseHandle(this->mumbeFile);
 			throw new std::runtime_error("Unable to create mumble link file mapping");
 		}
-
 	}
 
 	this->lm = (Gw2MumbleLink::MumbleLinkMemory *)MapViewOfFile(this->hMapObject, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(Gw2MumbleLink::MumbleLinkMemory));
@@ -25,14 +21,18 @@ Gw2MumbleLink::Gw2MumbleLink() noexcept(false) {
 		CloseHandle(this->hMapObject);
 		throw new std::runtime_error("Unable to read MumbeLink File!");
 	}
+
+	// If the shared memory is owned by us we want to zero it out at the beginning
+	if (ownMemory)
+		memset(this->lm, 0, sizeof(Gw2MumbleLink::MumbleLinkMemory));
 }
 
 Gw2MumbleLink::~Gw2MumbleLink() noexcept {
+	if (this->lm != nullptr)
+		UnmapViewOfFile(this->lm);
+
 	if (hMapObject != nullptr) 
 		CloseHandle(hMapObject);
-
-	if (this->mumbeFile != INVALID_HANDLE_VALUE)
-		CloseHandle(this->mumbeFile);
 }
 
 DWORD Gw2MumbleLink::getUITick() {
@@ -56,4 +56,8 @@ std::string Gw2MumbleLink::getIdentity() {
 	auto idy = std::wstring(this->lm->identity);
 
 	return converter.to_bytes(idy);
+}
+
+void Gw2MumbleLink::cleanupMumbeLinkMemory() {
+	memset(this->lm, 0, sizeof(Gw2MumbleLink::MumbleLinkMemory));
 }

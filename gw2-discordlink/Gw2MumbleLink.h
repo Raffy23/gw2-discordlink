@@ -35,7 +35,6 @@ private:
 	};
 
 	HANDLE hMapObject = nullptr;
-	HANDLE mumbeFile = INVALID_HANDLE_VALUE;
 	MumbleLinkMemory *lm;
 	
 public:
@@ -81,5 +80,7 @@ public:
 	const MumbleContext *getMumbleContext();
 	std::string getIdentity();
 
+	// Zero out mumbe link memory, might destroy some stuff 
+	void cleanupMumbeLinkMemory();
 };
 
