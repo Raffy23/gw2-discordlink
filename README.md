@@ -38,6 +38,8 @@ Create the `settings.json` like below and place it right along the .exe file
 ### Supported Languages:
 * **English** (en)
 * **Deutsch** (de)
+* **Français** (fr)
+* **Español** (es)
 
 ## Dependencies
 * [libcurl](https://curl.haxx.se/libcurl/)
