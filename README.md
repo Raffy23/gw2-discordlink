@@ -15,6 +15,8 @@ require a API-Key with at least the `builds` right to function properly.
 * Display character name and current map
 * Display how long the Character stayed on the map
 * Display profession / specialization icon besides Guild Wars 2 Logo
+* If own Discord API Key is used, Artwork can be freely changed
+* Support for multiple languages
 
 ## Configure
 Create or modify the `settings.json` like below and place it right along the .exe file
@@ -51,8 +53,11 @@ Create or modify the `settings.json` like below and place it right along the .ex
 1. Build [libcurl](https://curl.haxx.se/download.html) into `./libcurl-x64-release-static`
 2. Build discord-rpc or download the [pre-compiled binaries](https://github.com/discordapp/discord-rpc/releases) into `./discord-rpc-win64-dynamic`
 3. Build Visual Studio Project
+4. Make sure that the `long` folder and the `settings.json`are in the same directory as the .exe
 
-### Use your own Discord Account
+### Use your own Discord Account (optional)
+If you want to change the Artwork you can use your own Discord Rich Presence Appliction:
+
 1. Open the [Discord Developer Portal](https://discordapp.com/developers/applications/)
 2. Create a new Application, the `CLIENT ID` is the `discord-api-key` in the `settings.json` file.
 3. Activate Discord Rich Presence for the application
