@@ -57,35 +57,36 @@ Create or modify the `settings.json` like below and place it right along the .ex
 2. Create a new Application, the `CLIENT ID` is the `discord-api-key` in the `settings.json` file.
 3. Activate Discord Rich Presence for the application
 4. Under `Rich Presence > Art Assets` add the logos for the professions: 
-	| Asset Name    | Usage               | Resource (Link)
-	| ------------- | ------------------- | ----------------------------------------------------------------------
-	| gw2-logo 		| Guild Wars 2 Logo   |
-	| profession_1	| Guardian			  | https://wiki.guildwars2.com/wiki/File:Guardian_tango_icon_200px.png
-	| profession_2	| Warrior			  | https://wiki.guildwars2.com/wiki/File:Warrior_tango_icon_200px.png
-	| profession_3  | Engineer			  | https://wiki.guildwars2.com/wiki/File:Engineer_tango_icon_200px.png
-	| profession_4  | Ranger			  | https://wiki.guildwars2.com/wiki/File:Ranger_tango_icon_200px.png
-	| profession_5  | Thief			      | https://wiki.guildwars2.com/wiki/File:Thief_tango_icon_200px.png
-	| profession_6  | Elementalist		  | https://wiki.guildwars2.com/wiki/File:Elementalist_tango_icon_200px.png
-	| profession_7  | Mesmer			  | https://wiki.guildwars2.com/wiki/File:Mesmer_tango_icon_200px.png
-	| profession_8  | Necromancer		  | https://wiki.guildwars2.com/wiki/File:Necromancer_tango_icon_200px.png
-	| profession_9  | Revenant			  | https://wiki.guildwars2.com/wiki/File:Revenant_tango_icon_200px.png
-	| spec_18  		| Berserker			  | https://wiki.guildwars2.com/wiki/File:Berserker_tango_icon_200px.png
-	| spec_27  		| Dragonhunter		  | https://wiki.guildwars2.com/wiki/File:Dragonhunter_tango_icon_200px.png
-	| spec_34  		| Reaper			  | https://wiki.guildwars2.com/wiki/File:Reaper_tango_icon_200px.png
-	| spec_40  		| Chronomancer		  | https://wiki.guildwars2.com/wiki/File:Chronomancer_tango_icon_200px.png
-	| spec_43  		| Scrapper			  | https://wiki.guildwars2.com/wiki/File:Scrapper_tango_icon_200px.png
-	| spec_48 		| Tempest			  | https://wiki.guildwars2.com/images/9/90/Tempest_tango_icon_200px.png
-	| spec_5  		| Druid			  	  | https://wiki.guildwars2.com/wiki/File:Druid_tango_icon_200px.png
-	| spec_52  		| Herald			  | https://wiki.guildwars2.com/wiki/File:Herald_tango_icon_200px.png
-	| spec_55  		| Soulbeast			  | https://wiki.guildwars2.com/wiki/File:Soulbeast_tango_icon_200px.png
-	| spec_56  		| Weaver			  | https://wiki.guildwars2.com/wiki/File:Weaver_tango_icon_200px.png
-	| spec_57  		| Holosmith			  | https://wiki.guildwars2.com/wiki/File:Holosmith_tango_icon_200px.png
-	| spec_58  		| Deadeye			  | https://wiki.guildwars2.com/wiki/File:Deadeye_tango_icon_200px.png
-	| spec_59  		| Mirage			  | https://wiki.guildwars2.com/wiki/File:Mirage_tango_icon_200px.png
-	| spec_60  		| Scourge			  | https://wiki.guildwars2.com/wiki/File:Scourge_tango_icon_200px.png
-	| spec_61  		| Spellbreaker	      | https://wiki.guildwars2.com/wiki/File:Spellbreaker_tango_icon_200px.png
-	| spec_62  		| Firebrand			  | https://wiki.guildwars2.com/wiki/File:Firebrand_tango_icon_200px.png
-	| spec_63  		| Renegade			  | https://wiki.guildwars2.com/wiki/File:Renegade_tango_icon_200px.png
-	| spec_7  		| Daredevil			  | https://wiki.guildwars2.com/wiki/File:Daredevil_tango_icon_200px.png
+
+| Asset Name    | Usage               | Resource (Link)								|
+| ------------- | ------------------- | ----------------------------------------------------------------------  |
+| gw2-logo 		| Guild Wars 2 Logo   | |
+| profession_1	| Guardian			  | https://wiki.guildwars2.com/wiki/File:Guardian_tango_icon_200px.png |
+| profession_2	| Warrior			  | https://wiki.guildwars2.com/wiki/File:Warrior_tango_icon_200px.png |
+| profession_3  | Engineer			  | https://wiki.guildwars2.com/wiki/File:Engineer_tango_icon_200px.png |
+| profession_4  | Ranger			  | https://wiki.guildwars2.com/wiki/File:Ranger_tango_icon_200px.png |
+| profession_5  | Thief			      | https://wiki.guildwars2.com/wiki/File:Thief_tango_icon_200px.png |
+| profession_6  | Elementalist		  | https://wiki.guildwars2.com/wiki/File:Elementalist_tango_icon_200px.png |
+| profession_7  | Mesmer			  | https://wiki.guildwars2.com/wiki/File:Mesmer_tango_icon_200px.png
+| profession_8  | Necromancer		  | https://wiki.guildwars2.com/wiki/File:Necromancer_tango_icon_200px.png
+| profession_9  | Revenant			  | https://wiki.guildwars2.com/wiki/File:Revenant_tango_icon_200px.png
+| spec_18  		| Berserker			  | https://wiki.guildwars2.com/wiki/File:Berserker_tango_icon_200px.png
+| spec_27  		| Dragonhunter		  | https://wiki.guildwars2.com/wiki/File:Dragonhunter_tango_icon_200px.png
+| spec_34  		| Reaper			  | https://wiki.guildwars2.com/wiki/File:Reaper_tango_icon_200px.png
+| spec_40  		| Chronomancer		  | https://wiki.guildwars2.com/wiki/File:Chronomancer_tango_icon_200px.png
+| spec_43  		| Scrapper			  | https://wiki.guildwars2.com/wiki/File:Scrapper_tango_icon_200px.png
+| spec_48 		| Tempest			  | https://wiki.guildwars2.com/images/9/90/Tempest_tango_icon_200px.png
+| spec_5  		| Druid			  	  | https://wiki.guildwars2.com/wiki/File:Druid_tango_icon_200px.png
+| spec_52  		| Herald			  | https://wiki.guildwars2.com/wiki/File:Herald_tango_icon_200px.png
+| spec_55  		| Soulbeast			  | https://wiki.guildwars2.com/wiki/File:Soulbeast_tango_icon_200px.png
+| spec_56  		| Weaver			  | https://wiki.guildwars2.com/wiki/File:Weaver_tango_icon_200px.png
+| spec_57  		| Holosmith			  | https://wiki.guildwars2.com/wiki/File:Holosmith_tango_icon_200px.png
+| spec_58  		| Deadeye			  | https://wiki.guildwars2.com/wiki/File:Deadeye_tango_icon_200px.png
+| spec_59  		| Mirage			  | https://wiki.guildwars2.com/wiki/File:Mirage_tango_icon_200px.png
+| spec_60  		| Scourge			  | https://wiki.guildwars2.com/wiki/File:Scourge_tango_icon_200px.png
+| spec_61  		| Spellbreaker	      | https://wiki.guildwars2.com/wiki/File:Spellbreaker_tango_icon_200px.png
+| spec_62  		| Firebrand			  | https://wiki.guildwars2.com/wiki/File:Firebrand_tango_icon_200px.png
+| spec_63  		| Renegade			  | https://wiki.guildwars2.com/wiki/File:Renegade_tango_icon_200px.png
+| spec_7  		| Daredevil			  | https://wiki.guildwars2.com/wiki/File:Daredevil_tango_icon_200px.png
 	
 
